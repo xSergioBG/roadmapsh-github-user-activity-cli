@@ -42,3 +42,17 @@ node index.js octocat
 - **IssuesEvent**: Cuando el usuario abre un `issue` en un repositorio.
 - **WatchEvent**: Cuando el usuario da `star` a un repositorio.
 - **PullRequestEvent**: Cuando el usuario abre un `pull request` en un repositorio.
+
+## Errores y límites
+
+Requiere Node.js 22 o posterior. Consulta la primera página de actividad pública reciente, sin token ni acceso a actividad privada. No es un historial completo.
+
+El usuario inexistente, los límites de API, los fallos de red y las respuestas inválidas generan mensajes de error y código de salida 1. La espera de red está limitada a 10 segundos.
+
+## Pruebas
+
+```sh
+npm test
+```
+
+Las pruebas no llaman a GitHub: cubren respuestas, errores y la presentación correcta de eventos abiertos o cerrados.
